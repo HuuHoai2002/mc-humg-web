@@ -1,0 +1,1 @@
+Các model trong local - DTO

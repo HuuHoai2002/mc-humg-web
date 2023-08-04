@@ -1,0 +1,1 @@
+Tương tác để lấy các data source (internal/external) => API/Local
