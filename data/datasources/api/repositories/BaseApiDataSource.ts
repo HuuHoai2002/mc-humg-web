@@ -1,4 +1,5 @@
 import axios, { AxiosError, AxiosResponse } from 'axios'
+
 const axiosInstace = axios.create({
   baseURL: process.env.BASE_URL,
   headers: {
@@ -33,7 +34,8 @@ const removeAxiosToken = () => {}
 
 const processError = <T>(error: AxiosError): T => {
   console.error(`StatusCode: ${error.code} - ${error.message}`)
-  return error.response as T
+
+  return error.response as any
 }
 
 const responseBody = <T>(res: AxiosResponse<any>): T => res.data as T
@@ -71,4 +73,5 @@ const BaseApiDataSource = {
 }
 
 export { initAxios, removeAxiosToken, setAxiosToken }
+
 export default BaseApiDataSource
